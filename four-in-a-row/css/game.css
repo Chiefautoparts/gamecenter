@@ -1,0 +1,414 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #011efe;
+  font-family: 'Baloo Bhaina', Helvetica, sans-serif;
+}
+
+#navButton {
+  widht: 50px;
+  height: 50px;
+  background-color: #fdfe02;
+  color: #011efe;
+  border-radius: 100%;
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  font-size: 30px;
+  text-align: center;
+  pointer: cursor;
+  box-shadow: 6px 6px #4d4d33;
+}
+
+#refresh-button {
+  width: 50px;
+  height: 50px;
+  background-color: #fdfe02;
+  color: #011efe;
+  border-radius: 100%;
+  position: fixed;
+  left: 90px;
+  top: 20px;
+  font-size: 30px;
+  text-align: center;
+  pointer: cursor;
+  box-shadow: 6px 6px #4d4d33;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+#nav-box {
+  position: fixed;
+  top: 80px;
+  left: 20px;
+  width: 10%;
+  height: 90px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: none;
+  cursor: pointer;
+}
+
+#reset-box {
+  position: fixed;
+  top: 80px;
+  left: 20px;
+  width: 10%;
+  height: 90px;
+  border-radius: 8px;
+  overflow: hidden;
+  display: none;
+  cursor: pointer;
+}
+
+#confirm-span {
+height: 30px;
+width: 100%;
+background-color: #fdfe02;
+color: #011efe;
+font-size: 20px;
+padding: 8px 0px 2px 0px;
+line-height: 20px;
+margin: 0px;
+border: 0px;
+font-weight: bold;
+text-align: center;
+text-decoration: none;
+display: block;
+cursor: default;
+}
+
+.link-span {
+height: 30px;
+width: 100%;
+background-color: #fdfe02;
+opacity: 0.5;
+color: #011efe;
+font-size: 20px;
+padding: 8px 0px 2px 0px;
+line-height: 20px;
+margin: 0px;
+border: 0px;
+font-weight: bold;
+text-align: center;
+text-decoration: none;
+display: block;
+}
+
+.link-span:hover {
+  background-color: #fdfe02;
+  opacity: 1;
+}
+
+#board {
+  background-color: #fdfe02;
+  width: 700px;
+  height: 600px;
+  padding: 0px;
+  border-width: 0px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin: -25px auto 0px auto;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 6px 6px  #4d4d33;
+}
+
+.board-col {
+  height: 600px;
+  width: 96px;
+  display: inline-block;
+  padding: 0px;
+  border-width: 0px;
+  margin: 0px;
+}
+
+.board-piece {
+  background-color: #011efe;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  position: relative;
+  top: 10px;
+  left: 10px;
+  margin: 0px;
+  padding: 0px;
+  box-shadow: 6px 6px #4d4d33 inset;
+}
+
+.board-hole {
+  height: 100px;
+  width: 100px;
+  background-color: #fdfe02;
+}
+
+#game-text {
+  text-align: center;
+  color: #fdfe02;
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+h1 {
+  display: none;
+}
+
+#theme-select {
+  width: 30%;
+  min-width: 200px;
+  height: 230px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fdfe02;
+  border-radius: 16px;
+  display: block;
+}
+
+#custom-theme {
+  width: 30%;
+  min-width: 200px;
+  height: 330px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-color: #fdfe02;
+  border-radius: 16px;
+  display: none;
+}
+
+input {
+  margin: 0px 5px 10px 0px;
+}
+
+label {
+  padding: 0px;
+  margin-left: 120px;
+  display: block;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+  color: #000;
+  text-shadow: 2px 2px 3px #FFF;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  margin-top: 10px;
+  margin-bottom: -5px;
+}
+
+select {
+  width: 160px;
+  display: block;
+  padding: 0;
+  margin: 0px auto 5px auto;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid #CCC;
+}
+
+button {
+  width: 160px;
+  display: block;
+  padding: 0px;
+  margin: 0px auto 5px auto;
+  border-radius: 4px;
+  border-width: 0px;
+  background-color: #011efe;
+  font-family: 'Baloo Bhaina', Helvetica, sans-serif;
+  font-size: 16px;
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 3px #000;
+  clear: both;
+}
+
+#theme-button {
+  margin-top: 10px;
+}
+
+#center-this {
+  width: 30%;
+  min-width: 160px;
+  margin: 10px auto;
+  padding: 0px;
+}
+
+#center-colors {
+  width: 430px;
+  min-width: 430px;
+  margin: auto;
+  padding: 0px;
+  overflow: auto;
+}
+
+#create-option {
+  font-weight: bold;
+}
+
+.display-theme {
+  float: left;
+  width: 100px;
+  height: 100px;
+  color: #FFF;
+  background-color: #000;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 3px #444;
+  display: inline-block;
+  border: 2px dotted rgba(0, 0, 0, 0.5);
+  border-radius: 100%;
+  vertical-align: middle;
+  line-height: 25px;
+  padding-top: 25px;
+  margin-right: 10px;
+}
+
+#p2 {
+  margin-right: 0px;
+}
+
+#player-one {
+  float: left;
+  width: 75px;
+  height: 75px;
+  background-color: #000;
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 3px #444;
+  display: inline-block;
+  border-radius: 100%;
+  vertical-align: middle;
+  line-height: 75px;
+}
+
+#player-two {
+  float:right;
+  width: 75px;
+  height: 75px;
+  background-color: #FF0000;
+  color: #FFF;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 3px #000;
+  display: inline-block;
+  border-radius: 100%;
+  vertical-align: middle;
+  line-height: 75px;
+}
+
+#profile-area {
+  width: 60%;
+  margin: 20px 20%;
+}
+
+#profile-area h1 {
+  display: block;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0px 20px;
+  padding: 0px;
+  border: 0px;
+  color: #FFF;
+  text-shadow: 2px 2px 3px #444;
+}
+
+.team-member {
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fdfe02;
+  border-radius: 16px;
+  position: relative;
+}
+
+.team-pic {
+  width: 225px;
+  height: 225px;
+  line-height: 225px;
+  vertical-align: middle;
+  text-align: center;
+  padding: 0px;
+  border: 0px;
+  overflow: hidden;
+  border-radius: 100%;
+  display: inline-block;
+  object-fit: cover;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  margin-right: 10px;
+}
+
+.team-pic img {
+  max-width: 100%;
+  vertical-align: middle;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+.team-bio {
+  height: 100%;
+  vertical-align: middle;
+  width: calc(100% - 245px);
+  margin: auto 0px auto 0px;
+  padding: 0px;
+  border: 0px;
+  display: inline-block;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+.team-title {
+  font-size: 18px;
+  font-weight: bold;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  margin-top: -15px;
+  margin-bottom: 5px;
+}
+
+.team-bio h4 {
+  font-size: 24px;
+  font-weight: bold;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  margin-bottom: 5px;
+}
+
+.team-text {
+  font-size: 14px;
+  font-weight: normal;
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+  margin-top: -7px;
+}
