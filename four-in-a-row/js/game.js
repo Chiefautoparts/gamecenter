@@ -57,8 +57,8 @@ function setTheme() {
   if (document.getElementById('player-one')) {
     document.getElementById('player-one').style.backgroundColor = gameTheme[2];
     document.getElementById('player-two').style.backgroundColor = gameTheme[3];
-    document.getElementById('player-one').style.color = gameTheme[3];
-    document.getElementById('player-two').style.color = gameTheme[2];
+    document.getElementById('player-one').style.color = gameTheme[2];
+    document.getElementById('player-two').style.color = gameTheme[3];
     document.getElementById('theme-select').style.backgroundColor = gameTheme[1];
     document.getElementById('theme-select').style.color = gameTheme[0];
     document.getElementById('custom-theme').style.backgroundColor = gameTheme[1];
@@ -92,7 +92,7 @@ if (localStorage.saveBoard && document.getElementById('board')) {
   for (var a = 0; a < theBoard.length - 6; a++) {
     for (var i = 3; i < theBoard[a + 3].length - 3; i++) {
       if (theBoard[a + 3][i] === 1) {
-        boardCol[a].children[8 - 1].children[0].style.backgroundColor = playerOneColor;
+        boardCol[a].children[8 - i].children[0].style.backgroundColor = playerOneColor;
       }
       if (theBoard[a + 3][i] === 2) {
         boardCol[a].children[8 - i].children[0].style.backgroundColor = playerTwoColor;
